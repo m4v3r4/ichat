@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Create Chat
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Sohbet adı giriş alanı -->
+  <ion-item>
+    <ion-label position="floating">Sohbet Adı</ion-label>
+    <ion-input type="text" [(ngModel)]="chatName"></ion-input>
+  </ion-item>
+
+  <!-- Açıklama giriş alanı -->
+  <ion-item>
+    <ion-label position="floating">Açıklama</ion-label>
+    <ion-textarea [(ngModel)]="description"></ion-textarea>
+  </ion-item>
+
+
+  <!-- Kaydet düğmesi -->
+  <ion-button expand="full" (click)="createChat()">Kaydet</ion-button>
+</ion-content>

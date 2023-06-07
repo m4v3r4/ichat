@@ -1,0 +1,36 @@
+.content-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.profile-header {
+  width: 100%;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction:initial;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  margin-left: 45%;
+  margin-right: 45%;
+  border-radius: 50%;
+ 
+}
+
+.user-details {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile-footer {
+  width: 100%;
+}

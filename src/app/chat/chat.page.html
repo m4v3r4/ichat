@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button defaultHref="/home"></ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-list  lines="none">
+    <ion-item   lines="none" *ngFor="let message of messages" class="chat-message" [class.sent]="message.sender === currentUserUid" [class.received]="message.sender !== currentUserUid">
+      <div class="chat-balloon" [class.chat-balloon-right]="message.senderuid === currentUserUid" [class.chat-balloon-left]="message.senderuid !== currentUserUid">
+       
+        <ion-chip style=" height: 60px;">
+          <ion-avatar style="width: 60px; height: 60px;">
+            <img  [src]=message.senderphoto alt="">
+          </ion-avatar>
+          <ion-label>{{message.sendername}}</ion-label>
+        </ion-chip>
+        <div class="mesagecon">
+          <p>{{ message.content }}</p>
+        </div>
+        
+        <p>{{ formatDate(message.timestamp) }}</p>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-input [(ngModel)]="newMessage" placeholder="Yeni mesaj girin"></ion-input>
+    <ion-buttons slot="end">
+      <ion-button (click)="sendMessage()" expand="block">Gönder</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

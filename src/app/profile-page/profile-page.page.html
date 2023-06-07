@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Profil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>   
+  <div class="user-details">
+    <div class="avatar">
+      <ion-img src='{{ user?.photoURL }}' ></ion-img>
+    </div>
+    <br>
+    <div>
+      <h2>{{ user?.displayName }}</h2>
+      <p>{{ user?.email }}</p>
+    </div>
+    
+    <ion-item>
+      
+      <ion-label position="stacked">Resim Değiştir</ion-label>
+      <ion-input type="text" [(ngModel)]="profilePhotoURL"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="updateProfilePhoto()">Resmi Değiştir</ion-button>
+    <ion-item>
+      <ion-label position="stacked">Adı</ion-label>
+      <ion-input type="text" [(ngModel)]="userDisplayName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">E-posta</ion-label>
+      <ion-input type="email" [(ngModel)]="userEmail"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="updateProfile()">Bilgileri Güncelle</ion-button>
+    <ion-item>
+      <ion-label position="stacked">Yeni Şifre</ion-label>
+      <ion-input type="password" [(ngModel)]="newPassword"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Şifre Tekrar</ion-label>
+      <ion-input type="password" [(ngModel)]="confirmPassword"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="changePassword()">Şifre Değiştir</ion-button>
+    <ion-button expand="full" (click)="logout()">Çıkış Yap</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Arama</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="content-center">
+  <ion-grid class="ion-text-center">
+    <ion-row class="ion-justify-content-center">
+      <ion-col>
+        <ion-searchbar placeholder="Arama" (ionChange)="search($event)"></ion-searchbar>
+        <ion-list *ngIf="chats.length > 0">
+          <ion-item *ngFor="let chat of chats">
+            <div>
+              <h4>{{ chat.chatName }}</h4>
+              <p>{{ chat.description }}</p>
+              <ion-button color="primary" (click)="joinChat(chat)">
+                Sohbete Katıl
+              </ion-button>
+            </div>
+          </ion-item>
+        </ion-list>
+       
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

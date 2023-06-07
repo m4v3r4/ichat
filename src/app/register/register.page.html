@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Kayıt Ol</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Ad</ion-label>
+          <ion-input [(ngModel)]="firstName" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Soyad</ion-label>
+          <ion-input [(ngModel)]="lastName" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input [(ngModel)]="email" type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Şifre</ion-label>
+          <ion-input [(ngModel)]="password" type="password"></ion-input>
+        </ion-item>
+      
+        <ion-text color="danger" *ngIf="error">
+          {{ error }}
+        </ion-text>
+      </ion-list>
+    </ion-card-content>
+    
+    <ion-button expand="full" (click)="register()">Kayıt Ol</ion-button>
+    
+    
+  </ion-card>
+  <ion-text (click)="login()"> Hesabınız var mı ?</ion-text>
+  <ion-content class="ion-padding">
+   
+</ion-content>

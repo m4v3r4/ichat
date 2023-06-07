@@ -1,20 +1,56 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>
-      Blank
+      İ-CHAT
     </ion-title>
+   
   </ion-toolbar>
 </ion-header>
+<ion-tab-bar slot="top">
+  <ion-tab-button tab="search" (click)="navigateToSearch()">
+    <ion-icon name="search"></ion-icon>
+    <ion-label>Arama</ion-label>
+  </ion-tab-button>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-tab-button tab="profile" (click)="navigateToProfile()">
+    <ion-icon name="person"></ion-icon>
+    <ion-label>Profil</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
+<ion-content>
+ 
+    
+ 
+ 
+  <ion-list scroll="true"  *ngIf="chats && chats.length > 0;">
+    <!-- Sohbetleri göster -->
+    <ion-card  *ngFor="let chat of chats" >
+      <ion-card-header>
+        <ion-card-title>{{ chat.chatName }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{ chat.description }}
+      </ion-card-content>
+      <ion-button fill="clear" (click)="navigateToChat(chat.chatId)">Sohbete git</ion-button>
+    </ion-card>
+    
+    
+  </ion-list>
+  
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+ 
 </ion-content>
+
+
+  
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="navigateToCreate()">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+
