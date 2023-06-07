@@ -8,9 +8,8 @@ iChat, kullanıcıların anlık mesajlaşma yapmasını sağlayan basit bir ilet
 ## Özellikler
 
 - Kullanıcılar kayıt olabilir ve oturum açabilir.
-- Kullanıcılar, diğer kullanıcılarla anlık mesajlaşma yapabilir.
+- Kullanıcılar, grup sohbetlerine katılabilir ve grup üyeleriyle mesajlaşabilir.
 - Kullanıcılar, metin tabanlı mesajlar gönderebilir ve alabilir.
-- Kullanıcılar, arkadaşlarını ekleyebilir ve arkadaşlarının çevrimiçi durumlarını görüntüleyebilir.
 - Kullanıcılar, profil bilgilerini güncelleyebilir.
 
 ## Kurulum
@@ -37,8 +36,8 @@ npm start
 
 ## Kullanım
 
-1. Tarayıcınızda `http://localhost:3000` adresine gidin.
+1. Tarayıcınızda `http://localhost:8100` adresine gidin.
 2. Yeni bir hesap oluşturmak için "Kayıt Ol" seçeneğini seçin ve gerekli bilgileri girin.
 3. Oluşturduğunuz hesapla oturum açmak için "Giriş Yap" seçeneğini seçin ve kullanıcı adı ve şifrenizi girin.
-4. Ana sayfada diğer kullanıcıları görebilir ve onlarla sohbet edebilirsiniz.
+4. Grup sohbetlerine katılmak için gruplar sekmesine gidin, bir grup seçin ve grup üyeleriyle mesajlaşmaya başlayın.
 5. Profil bilgilerinizi güncellemek için, kullanıcı adının yanındaki profil simgesine tıklayın ve "Profil Düzenle" seçeneğini seçin.
