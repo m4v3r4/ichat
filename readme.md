@@ -1,6 +1,4 @@
 # iChat
-![s1](https://github.com/m4v3r4/ichat/assets/67810878/286a2291-6a50-4cef-ba4f-6194eae23cbe)
-![s2](https://github.com/m4v3r4/ichat/assets/67810878/b1e07871-5655-40f0-9a85-cbb064b585ff)
 
 
 iChat, kullanıcıların anlık mesajlaşma yapmasını sağlayan basit bir iletişim uygulamasıdır. Bu uygulama, kullanıcıların metin tabanlı mesajlar göndermelerine ve alışveriş yapmalarına olanak tanır.
